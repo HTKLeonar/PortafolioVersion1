@@ -1,0 +1,536 @@
+/*Kevin Hidalgo Tuz Portafolio V1*/
+
+/*Estilizando CSS Mobile*/
+
+/*=============== Aspectos  Generales ========*/
+*{
+    /*Acopla todos las cajas aun solo tamaño cuando este se modifica, comportamiento por defecto del tamaño de la caja*/
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;/*Margen o distancia entre las cajas*/
+    font-family: 'Roboto',sans-serif;/*Tipografica*/
+}
+
+h1{font-size: 2em;}/*Tamaño de la letra*/
+h2{font-size: 1.5em;}
+p{font-size: 1em;}
+a{font-size: 1em;}
+
+button{
+    font-size: 1em; 
+    font-weight: bold;/*Grosor de la letra*/
+    border-radius: 10px;/*Radio o radio del borde del botan */
+    padding: 10px 12px; /*Distancia entre el texto y la caja* arriba - abajo*/
+    border: 2px solid rgba(0,0,0,0.5);/*contorno o estilo del borde de la caja*/
+    box-shadow: 8px 5px 2px rgba(0,0,0,0.5);/*Sombra de la caja en Y, sonmbra en X, intensidad y color*/
+    color: rgb(245,245,245);/*Color de la letra*/
+    background-color: darkmagenta;/*Color de fondo*/
+}
+
+/*Hace que al pasar el cursor haga una accion en esta caso cambia el color del contenido al pasar el cursor*/
+button:hover{
+    background-color: rgb(70, 1, 70);
+}
+
+
+/*================== Barra de Navegacion ===================*/
+
+.container{
+    max-width: 1360px;/*Coloca el maximo ancho a un elemento, osea que no sobrepasa el tamaño definido*/
+    margin:auto;
+}
+
+header {
+    background-color: rgb(240,240,240);
+}
+
+header .Logo{
+    margin: 0px;
+    padding: 10px 10px;
+    font-weight: bold;
+    color:rgb(22, 22, 146);
+    font-size: 1.35em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header .container{
+    display:flex; /*Junta las cajas una atras de otra*/
+    flex-direction: column;/*Pone una encima de otra cada caja*/
+    align-items: center;/*centra el contenido de cada caja*/
+}
+
+header nav{
+    display:flex;
+    flex-direction: column;
+    text-align: center;/*centra el texto*/
+    margin-bottom: 25px;/*margenes de la parte inferior*/
+}
+
+header a{
+   padding: 6px 3px;
+   text-decoration: none;/*Quita el subrayado de la palabra*/
+   font-weight: bold;
+   color:rgb(5, 12, 12);
+}
+
+header a:hover{
+    color:rgb(12, 185, 185)
+}
+
+/*================== HERO/Baner ================*/
+
+#BanerInicial{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/*Justifica el contenido de cada caja como en el word*/
+    text-align: center;
+    height: 100vh;/*altura de la ventana grafica se expresa en porcentajes, la altura cambia dependiendo de cada dispositivo,que por lo general es fija */
+
+    /*Agregamos la imagen y agregamos un degradado al fondo*/
+    /*El degradado usado es uno lineal*/
+    background-image:linear-gradient(
+        /*Posicion por defecto en linea recta, color de degradado*/ 
+        45deg,/*Grados*/
+        /*Se puden agregar apartir de dos o mas degradados*/
+        rgba(17, 15, 126, 0.5),
+        rgba(0,0,0,0.5)
+    ),url(Hero.jpg);
+    background-repeat: no-repeat;/*Define como se repiten los fondos del documento, se puede repetir sobre el eje X, o el eje Y, ambos ejes o no repetirse*/
+    background-size: cover;/*Especifica el tamaño de las imagenes de fondo, con la funcion cover hace que la imagen conserve su proporcion propia*/
+    background-position:center center;/*Define la posicion inicial de la imagen de fondo especificada en este caso estamos centrando arriba y abajo asi como tambien izq y der*/
+}
+
+#BanerInicial h1 {
+    color:rgb(255, 255, 255);
+}
+
+#BanerInicial h2 {
+    color:rgb(255, 255, 255);
+}
+
+#BanerInicial p {
+    color:rgb(255, 255, 255);
+}
+
+/*==================== MENU NO.1 =======================*/
+
+#Lenguajes {
+    background-color: rgb(15, 15, 15);
+    color:rgb(245, 245, 245);
+}
+
+#Lenguajes .container{
+    text-align: center;
+    padding: 35px 20px;
+}
+
+#Lenguajes .container h1{
+    font-weight:bold ;  
+    color:rgb(202, 73, 13);
+    margin-bottom: 50px;
+    text-shadow: 1px 2px 12px rgba(245, 245, 245, 0.26);
+}
+
+.acentoL1{
+    color: rgb(29, 108, 226);
+    font-size: 25px;
+    text-shadow: 1px 2px 8px rgba(255, 255, 255, 0.664);
+}
+
+.acentoL2{
+    color: rgb(235, 34, 20);
+    font-size: 25px;
+    text-shadow: 1px 2px 5px rgba(255, 255, 255, 0.664);
+}
+
+.acentoL3{
+    color: rgb(154, 21, 243);
+    font-size: 25px;
+    text-shadow: 1px 2px 5px rgba(255, 255, 255, 0.664);
+}
+
+.acentoL4{
+    color: rgb(243, 239, 21);
+    font-size: 25px;
+    text-shadow: 1px 2px 5px rgba(245, 245, 245, 0.664);
+}
+
+#Lenguajes .container p{
+    display: none;/*Oculta el contenido de la caja*/
+}
+
+#Lenguajes .contenedores-de-lenguajes{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding:50px;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+/*Agarramos o editamos el primer div*/
+.contenedores-de-lenguajes:first-child{
+    background-image:linear-gradient(
+        45deg,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.60)
+    ),url(CPlus.jpg);
+}
+
+.contenedores-de-lenguajes:nth-child(2){
+    background-image:linear-gradient(
+        45deg,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.60)
+    ),url(Java.jpg);
+}
+
+.contenedores-de-lenguajes:nth-child(3){
+    background-image:linear-gradient(
+        45deg,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.60)
+    ),url(Csharp.jpg);
+}
+/*Agarramos o editamos el ultimo div*/
+.contenedores-de-lenguajes:last-child{
+    background-image:linear-gradient(
+        45deg,
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.60)
+    ),url(SQL.jpg);
+}
+
+
+/*==================== MENU NO.2 =======================*/
+
+/*1° Primero color al fondo y a las letras*/
+#LenguajesEnCurso {
+    background-color: rgb(245, 245, 245);
+    color: rgb(8, 8, 8);
+}
+
+/*2° Centramos el contenido de las cajas y aplicamos distancia entre el texto y la caja*/
+#LenguajesEnCurso .container{
+    text-align: center;
+    padding: 35px 20px;
+}
+
+/*Editamos cada contenido Titulos*/
+#LenguajesEnCurso .container h1{
+    margin: 30px;
+    padding: 5px;
+    text-shadow: 1px 2px 8px rgba(22, 21, 21, 0.644);
+}
+
+.AcentoTitulo1 {
+    color:rgb(12, 11, 11);
+    text-shadow: 1px 4px 8px rgba(240, 129, 26, 0.767);
+    font-size: 15px;
+}
+
+.AcentoTitulo2{
+    color:rgb(12, 11, 11);
+    text-shadow: 1px 4px 8px rgba(37, 130, 236, 0.767);
+    font-size: 15px;
+}
+
+.AcentoTitulo3 {
+    color:rgb(12, 11, 11);
+    text-shadow: 1px 4px 8px rgba(253, 253, 18, 0.767);
+    font-size: 15px;
+}
+
+/*Les ponemos las propiedades a cada caja para que no esten juntas, en este caso esten centradas, Edicion de las cajas*/
+#LenguajesEnCurso .LenguajesProceso{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+#LenguajesEnCurso .LenguajesProceso img{
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+}
+
+
+/*==================== MENU NO.3 =======================*/
+
+#ProyectosHechos {
+    background-color: rgb(15, 15, 15);
+    color:rgb(245, 245, 245);
+}
+
+#ProyectosHechos .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px;
+    text-align: center;
+}
+
+#ProyectosHechos .container h1{
+    margin: 25px;
+    padding: 30px 15px;
+    text-shadow: 1px 2px 10px rgba(231, 223, 223, 0.726);
+}
+#ProyectosHechos .container h2{
+    margin: 10px;
+    padding: 25px 15px;
+    text-shadow: 1px 2px 2px rgba(231, 223, 223, 0.726);
+}
+
+#ProyectosHechos .container p{
+    margin: 20px;
+    font-size: 18px;
+    padding: 30px 0px;
+}
+
+/*==================== MENU NO.4 =======================*/
+
+#FormacionAcademica {
+    background-color: rgb(245, 245, 245);
+    color: rgb(8, 8, 8);
+}
+
+#FormacionAcademica .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#FormacionAcademica .container h1{
+    margin: 25px;
+    padding: 25px 15px;
+    text-shadow: 1px 2px 8px rgba(22, 21, 21, 0.644);
+}
+
+#FormacionAcademica .container h2{
+    margin: 25px;
+    padding: 25px 15px;
+}
+
+#FormacionAcademica .Escuelas img{
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    border-radius: 20px;
+   
+}
+
+/*==================== MENU NO.5 =======================*/
+
+
+#Contacto-Final{
+    background-color: rgb(15, 15, 15);
+    color:rgb(245, 245, 245);
+    padding: 20px;
+}
+
+#Contacto-Final .container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    height: 18vh;
+}
+
+#Contacto-Final .container a{
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1.5px 2px rgba(216, 216, 216, 0.747);
+}
+
+#Contacto-Final .container a:hover{
+    color:rgb(31, 229, 255);
+}
+
+#Contacto-Final .container p{
+    color: darkgrey;
+}
+
+#Contacto-Final .container-DerechosAutor p{
+    color: darkgrey;
+    font-size:small;
+}
+
+/*Estilizando CSS modo Escritorio*/
+
+@media (min-width: 720px) {
+
+/* ============= BARRA DE NAVEGACION ===============*/
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    header nav {
+        flex-direction: row;
+        margin: 0px;
+        padding-left: 20px;
+    }
+
+    header a{
+        padding: 18px;
+    }
+
+/* ========== SECCION 1 ===============*/
+
+    #BanerInicial p{
+        padding: 60px;
+    }
+
+/*============ SECCION 2 ============== */
+
+    #Lenguajes .container{
+        padding: 2% 0%;
+    }
+
+    #Lenguajes .container h1{
+        padding: 10px;
+    }
+
+    #Lenguajes .container p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Lenguajes .LenguajesDescripcion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #Lenguajes .contenedores-de-lenguajes{
+        border-radius: 50px;
+    }
+
+    #Lenguajes .contenedores-de-lenguajes{
+        width: 500px;
+        height: 400px;
+    }
+
+/*============ SECCION 2 =================*/
+
+    #LenguajesEnCurso .container{
+        padding: 9% 0%;
+    }
+
+    #LenguajesEnCurso .LenguajeCurso{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+
+    #LenguajesEnCurso .LenguajesProceso{
+        margin: 50px;
+    }
+
+    #LenguajesEnCurso .LenguajesProceso h2{
+        font-size: 30px
+    }
+    
+    #LenguajesEnCurso .LenguajesProceso img{
+        width: 150px;
+        height: 150px;
+    }
+
+/*============ SECCION 3 =================*/
+
+    #ProyectosHechos .container{
+        padding: 5% 0%;
+    }
+
+    #ProyectosHechos .Proyectos{
+        padding: 40px;
+    }
+
+    #ProyectosHechos .img-container{
+        background-image:linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+        ),url(ProyectosImagen.jpg);
+        height: 375px;
+        width: 700px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 25px;
+        
+    }
+    
+    #ProyectosHechos .texto{
+        margin: 40px;
+        padding: 10px;
+    }
+
+    #ProyectosHechos .Proyectos-Contenido h2{
+        margin: 0px;
+        padding: 18px;
+    }
+
+    #ProyectosHechos .Proyectos-Contenido button{
+        font-size: 18px;
+    }
+
+    #ProyectosHechos .Proyectos{
+        display: flex;
+        justify-items: center;
+        justify-content: space-evenly;
+    }
+
+   
+
+/*============ SECCION 4 =================*/
+
+    #FormacionAcademica .container{
+        padding: 10.5% 0%;
+    }
+
+    #FormacionAcademica .Escuelas{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    #FormacionAcademica .Escuelas-contenido {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+        margin: 25px;
+    }
+
+    #FormacionAcademica .Escuelas-contenido img{
+        width: 120px;
+        height: 120px;
+    }
+
+/*============== Pie de pagina =======*/
+
+    #Contacto-Final .container-DerechosAutor{
+        align-items:end;
+    }
+
+    #Contacto-Final .container-DerechosAutor p{
+        padding: 8px 0px;
+    }
+}
